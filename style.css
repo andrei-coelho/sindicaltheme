@@ -1,0 +1,147 @@
+/*
+
+Theme Name: Sindical Theme
+author: Andrei Coelho
+
+*/
+
+/* style de links (EDITAR) */
+
+h1, h2, h3, .nav-link, .btn {
+    font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.nav-link-light {
+    font-weight: bold;
+    color:white !important;
+}
+
+.nav-link-light:hover {
+    font-weight: bold;
+    color:#FFCC99 !important;
+}
+
+.nav-link-light.active {
+    color: #FFCC99 !important;
+}
+
+.nav-link {
+    font-size: 18px;
+}
+
+.nav-link.sm {
+    font-size: 13px;
+}
+
+/* STYLES FIXES - NUNCA EDITAR */
+
+.notice-style-capa {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.notice-style-simple {
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.second-part {
+    height: 80px;
+    width: 20%;
+}
+
+.bg-img-noticia-campanha-salarial {
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.bg-img-not {
+    background-position: center center;
+}
+
+.bg-degrade-black {
+    background-position: bottom center;
+}
+
+@media (min-width: 0px) { 
+
+    .separador {
+        height: 180px;
+    }
+
+    .bg-img-noticia-campanha-salarial {
+        background-size:  auto 100%;
+        height: 350px;
+    }
+
+    .notice-style-capa {
+        background-size:  auto 100%;
+        min-height: 375px;
+    }
+
+    .notice-style-simple {
+        background-size:  100% auto ;
+        min-height: 300px;
+    }
+
+    #fixed-header {
+        height: 90px;  
+        width: 100%;
+    }
+}
+
+@media (min-width: 410px) { 
+    .separador {
+        height: 300px;
+    }
+    .bg-img-noticia-campanha-salarial {
+        background-size:   auto 100%;
+        height: 500px;
+    }
+}
+
+@media (min-width: 576px) { 
+
+    .separador {
+        height: 250px;
+    }
+    .notice-style-capa {
+        background-size:  100% auto ;
+    }
+
+    .bg-img-noticia-campanha-salarial {
+        background-size:  100% auto ;
+        height: 450px;
+    }
+    
+    
+}
+
+@media (min-width: 768px) { 
+    
+    #fixed-header {
+        height: 130px;  
+    } 
+
+    .notice-style-simple {
+        min-height: 200px;
+    }
+}
+
+@media (min-width: 992px)  {
+    .separador {
+        height: 200px;
+    }
+    .notice-style-simple {
+        min-height: 200px;
+    }
+    .bg-img-noticia-campanha-salarial {
+        background-size:   auto 100%;
+        height: 400px;
+    }
+ }
+
+@media (min-width: 1200px) { }
+
+@media (min-width: 1400px) { }
+
