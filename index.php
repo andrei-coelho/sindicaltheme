@@ -36,7 +36,7 @@
             $init = true;
         }
        
-        include($typeP );
+        include $typeP;
 
     endwhile; 
 
