@@ -12,11 +12,10 @@ if($lastc->parent > 0){
 }
 
 if(!in_array($extType, $types)){
-    // error
+    wp_error();
+    return;
 }
 
 get_header();
-
 get_template_part('templates/post', $extType);
-
 get_footer();

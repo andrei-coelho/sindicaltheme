@@ -2,20 +2,21 @@
     
     get_header();
 
-   
     $campanha_salarial_status = true;
     
-
     $destaque = false;
     $init = false;
     $quant = (!$campanha_salarial_status ? 4 : 3);
     $typeP = $quant == 4 ? "inc/post_simple_small.php" : "inc/post_simple_mid.php";
 
-    $query = new WP_Query( [
+    $query = new WP_Query([
         "category_name" => "noticias",
         "posts_per_page" => $quant,
         'order' => 'DESC'
     ]);
+
+    $noticias = [];
+    $capa     = [];
 
     while($query -> have_posts()):
 
@@ -25,34 +26,40 @@
         $category = $cats[$catI]->name;
 
         if(!$destaque){
-            include("inc/post_destaque.php");
+            
             $destaque = true;
+            $capa     = [
+                "link"  => get_the_permalink(),
+                "title" => get_the_title(),
+                "image" => get_the_post_thumbnail_url(),
+                "descr" => get_the_excerpt(),
+                "data"  => get_the_time('d/m/Y'),
+                "categ" => $category
+            ];
             continue;
         }
+
+        $noticias[] = [
+            "link"  => get_the_permalink(),
+            "title" => get_the_title(),
+            "image" => get_the_post_thumbnail_url(),
+            "data"  => get_the_time('d/m/Y'),
+            "categ" => $category
+        ];
      
         if(!$init){
-            echo '<div class="container">
-            <div class="row py-3">';
+            echo '';
             $init = true;
         }
-       
-        include $typeP;
 
     endwhile; 
 
-    // insere a campanha salarial post
+    wp_reset_query();
 
-    if($campanha_salarial_status){
-        $ano = date('Y');
-        include('inc/campanha_salarial_last.php');
-    }
-
-
-    if($init)
-    echo "</div></div>";
+    // insere a capa 
+    include("inc/post_destaque.php");
 
     ?>
-
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
@@ -64,10 +71,21 @@
         </div>
     </div>
 
-    <?php
+    <div class="container">
+        <div class="row py-3">
+            <?php
+                foreach ($noticias as $not) {
+                    include $typeP;
+                }
+                if($campanha_salarial_status){
+                    include 'inc/campanha_salarial_last.php';
+                } else {
+                    // inclui dowload da ultima convenção coletiva de trabalho
+                }
+            ?>
+        </div>
+    </div>
 
-    wp_reset_postdata();
-    
-    get_footer(); 
+<?php get_footer(); 
 
 
