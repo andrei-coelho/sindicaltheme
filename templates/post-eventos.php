@@ -8,12 +8,15 @@ if(have_posts()):
 <div class="container">
 
     <div class="row p-3 bg-white mt-3 border">
+
         <?php if(get_the_post_thumbnail_url() != ""): ?>
+        
         <div class="col-12">
             
             <img class="w-100" src="<?php get_the_post_thumbnail_url() ?>">   
                      
         </div>
+
         <?php endif; ?>
 
         <div class="col-12 my-4">

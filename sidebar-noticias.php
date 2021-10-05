@@ -1,6 +1,5 @@
 <?php 
 
-
 $query = new WP_Query([
     "category_name" => "noticias",
     "posts_per_page" => 3,

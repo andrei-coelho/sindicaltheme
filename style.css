@@ -35,6 +35,10 @@ h1, h2, h3, .nav-link, .btn {
 
 /* STYLES FIXES - NUNCA EDITAR */
 
+.fill-white {
+    fill: white !important;
+}
+
 .notice-style-capa {
     background-position: center center;
     background-repeat: no-repeat;
@@ -62,6 +66,8 @@ h1, h2, h3, .nav-link, .btn {
 .bg-degrade-black {
     background-position: bottom center;
 }
+
+
 
 @media (min-width: 0px) { 
 
@@ -107,6 +113,14 @@ h1, h2, h3, .nav-link, .btn {
     }
     .notice-style-capa {
         background-size:  100% auto ;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+    }
+
+    .capa-link:hover .notice-style-capa {
+        background-size:  110% auto ;
     }
 
     .bg-img-noticia-campanha-salarial {

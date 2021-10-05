@@ -2,7 +2,7 @@
     
     get_header();
 
-    $campanha_salarial_status = true;
+    $campanha_salarial_status = false;
     
     $destaque = false;
     $init = false;
@@ -74,14 +74,15 @@
     <div class="container">
         <div class="row py-3">
             <?php
+
                 foreach ($noticias as $not) {
                     include $typeP;
                 }
+
                 if($campanha_salarial_status){
                     include 'inc/campanha_salarial_last.php';
-                } else {
-                    // inclui dowload da ultima convenção coletiva de trabalho
-                }
+                } 
+
             ?>
         </div>
     </div>
