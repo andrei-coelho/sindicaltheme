@@ -1,5 +1,5 @@
 <div class="col-12 col-md-4  p-0  ">
-<a class="p-0" href="<?php echo $not['link']; ?>">
+    <a class="p-0" href="<?php echo $not['link']; ?>">
         <div class="shadow bg-white border m-2">
             <div class="notice-style-simple" 
                 style="background-image:url('<?php echo $not['image']; ?>')">

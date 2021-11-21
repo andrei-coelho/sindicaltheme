@@ -12,7 +12,8 @@
     $query = new WP_Query([
         "category_name" => "noticias",
         "posts_per_page" => $quant,
-        'order' => 'DESC'
+        'order' => 'DESC',
+        "paged" => 1
     ]);
 
     $noticias = [];
@@ -66,7 +67,7 @@
                 <?php include "inc/blog_last.php"; ?>
             </div>
             <div class="col-12 col-md-6">
-                <?php include "inc/eventos_last.php"; ?>
+                <?php include "inc/right_side_home.php"; ?>
             </div>
         </div>
     </div>

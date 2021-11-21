@@ -1,6 +1,6 @@
 <?php 
 
-$types = ['noticias', 'eventos', 'campanha-salarial', 'blog'];
+$types = ['noticias', 'eventos', 'campanha-salarial', 'blog-do-presidente'];
 $ctgry = get_the_category();
 $lastc = $ctgry[count($ctgry)-1];
 

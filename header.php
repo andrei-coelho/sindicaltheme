@@ -8,6 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
+    <script src="<?php bloginfo('template_url'); ?>/js/async_connect_api.js"></script>
+    <script>
+        config_api_connection("<?php echo site_url(); ?>")
+    </script>
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -25,13 +29,13 @@
                             <a class="nav-link nav-link-light active sm" aria-current="page" href="#">home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="#">quem somos</a>
+                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/quem-somos/">quem somos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="#">diretoria</a>
+                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/diretoria/">diretoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="#">contato</a>
+                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/contato/">contato</a>
                         </li>
                     </ul>
                 </div>
@@ -64,19 +68,19 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto" style="--bs-scroll-height: 400px;">
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" aria-current="page" href="#">noticias</a>
+                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/noticias">noticias</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="#">eventos</a>
+                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/eventos">eventos</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="#">blog do presidente</a>
+                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/blog-do-presidente">blog do presidente</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="#">CCT</a>
+                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/cct">CCT</a>
                     </li>
 
                     <li class="nav-item">
