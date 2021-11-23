@@ -1,5 +1,7 @@
 <?php 
 
+$atualPage = "eventos";
+
 get_header();
 
 $varsAPI = [

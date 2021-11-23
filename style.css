@@ -51,7 +51,8 @@ h1, h2, h3, .nav-link, .btn {
 
 .second-part {
     height: 80px;
-    width: 20%;
+    /* width: 20%; /* quando o "seja sócio" está ativo */
+    width: 8%;
 }
 
 .bg-img-noticia-campanha-salarial {
@@ -66,7 +67,6 @@ h1, h2, h3, .nav-link, .btn {
 .bg-degrade-black {
     background-position: bottom center;
 }
-
 
 
 @media (min-width: 0px) { 

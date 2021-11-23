@@ -1,5 +1,7 @@
 <?php 
 
+$atualPage = "noticias";
+
 get_header();
 
 $varsAPI = [

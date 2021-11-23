@@ -1,3 +1,4 @@
+<?php global $atualPage; ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,41 +17,63 @@
     <?php wp_head(); ?>
 </head>
 <body class="bg-light">
+ 
 
 <header>
 
-    <nav class="top-menu d-none d-md-block bg-dark w-100">
+    <nav id="top-menu" class="top-menu d-none d-md-block bg-white w-100">
 
         <div class="container-fluid">
             <div class="row py-1">
                 <div class="col-6">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light active sm" aria-current="page" href="#">home</a>
+                            <a class="nav-link <?php echo($atualPage == "home" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/quem-somos/">quem somos</a>
+                            <a class="nav-link <?php echo($atualPage == "sindicato" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>/o-sindicato/">O Sindicato</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/diretoria/">diretoria</a>
+                            <a class="nav-link <?php echo($atualPage == "diretoria" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>/diretoria/">Diretoria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link nav-link-light sm" href="<?php echo site_url(); ?>/contato/">contato</a>
+                            <a class="nav-link <?php echo($atualPage == "contato" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>/contato/">Contato</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-6">
-                    <button class="float-end btn btn-sm btn-outline-light mt-1">entrar</button>
-                    <span class="float-end text-light me-3 mt-1">+55 55 5555-5555</span>
+
+                <div class="col-6 d-flex flex-row-reverse">
+
+                    <a href="https://www.cut.org.br/" target="_blank">
+                        <img src="<?php bloginfo("template_url"); ?>/img/ic-cut.jpg" style="height: 40px;">
+                    </a>
+
+                    <a href="https://www.industriall-union.org/" target="_blank">
+                        <img src="<?php bloginfo("template_url"); ?>/img/ic-industriall.jpg" style="height: 40px;">
+                    </a>
+
+                    <a href="#" target="_blank">
+                        <img src="<?php bloginfo("template_url"); ?>/img/ic-sinap.jpg" style="height: 40px;">
+                    </a>
+
+                    <a href="https://www.facebook.com/Papeleiros/" target="_blank">
+                        <img src="<?php bloginfo("template_url"); ?>/img/ic-federacao.jpg" style="height: 40px;">
+                    </a>
+
+                    <!-- login
+                    <button class="float-end btn btn-sm btn-outline-dark mt-1">entrar</button>
+                    -->
                 </div>
+                
             </div>
         </div>
 
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-0">
+    <nav id="navbar-principal" class="navbar navbar-expand-lg navbar-dark bg-primary p-0 m-0">
 
         <div class="container-fluid p-lg-0">
+
             <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -68,25 +91,33 @@
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll mx-auto" style="--bs-scroll-height: 400px;">
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/noticias">noticias</a>
+                        <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>">Home</a>
+                    </li>
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-light <?php echo($atualPage == "noticias" ? "active" : ""); ?>" href="<?php echo site_url(); ?>/noticias">Notícias</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/eventos">eventos</a>
+                        <a class="nav-link nav-link-light <?php echo($atualPage == "eventos" ? "active" : ""); ?>" href="<?php echo site_url(); ?>/eventos">Eventos</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/blog-do-presidente">blog do presidente</a>
+                        <a class="nav-link nav-link-light <?php echo($atualPage == "blog-do-presidente" ? "active" : ""); ?>" href="<?php echo site_url(); ?>/blog-do-presidente">Blog do Presidente</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link nav-link-light" href="<?php echo site_url(); ?>/category/cct">CCT</a>
+                        <a class="nav-link nav-link-light <?php echo($atualPage == "cct" ? "active" : ""); ?>" href="<?php echo site_url(); ?>/cct">Convenção Coletiva</a>
                     </li>
 
+                    <!--Em desenvolvimento
                     <li class="nav-item">
                         <a class="nav-link nav-link-light" href="#">campanha salarial</a>
                     </li>
-                    
+                    -->
+
+                    <!--Serviços
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-link-light dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             serviços
@@ -98,6 +129,18 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                    -->
+
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>/o-sindicato/">O Sindicato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>/diretoria/">Diretoria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>/contato/">Contato</a>
+                    </li>
+
                 </ul>
                 
 
@@ -105,20 +148,18 @@
 
             <div class="second-part bg-secondary d-none d-lg-block px-3">
                 
-            <div class="row">
-                <div class="col-4">
-                    <button id="ic-searc" class="btn btn-clean mt-3 pt-2 w-100">
-                        <img style="width: 25px;" src="<?php bloginfo('template_url'); ?>/img/ic-search.png" alt="">
-                    </button>
+                <div class="row">
+                    <div class="col-12">
+                        <button id="ic-searc" class="btn btn-clean mt-3 pt-2 w-100">
+                            <img style="width: 25px;" src="<?php bloginfo('template_url'); ?>/img/ic-search.png" alt="">
+                        </button>
+                    </div>
+                    <!--
+                    <div class="col-8">
+                        <a href="#" class="btn btn-primary mt-4 w-100 shadow">SEJA SÓCIO</a>
+                    </div>
+                    -->
                 </div>
-                <div class="col-8">
-                    <a href="#" class="btn btn-primary mt-4 w-100 shadow">SEJA SÓCIO</a>
-                </div>
-            </div>
-                
-                
-                
-            
 
             </div>
 
@@ -130,10 +171,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="m-0 p-0 mt-2 px-3 ">
+                    <form class="m-0 p-0 mt-2 px-3 " method="get" action="<?php bloginfo('url') ?>">
                         
                         <div class="input-group shadow">
-                            <input class="form-control" type="search" placeholder="Palavra-chave" aria-label="Search">
+                            <input class="form-control" name="s" type="search" placeholder="Palavra-chave" aria-label="Search">
                             <button class="btn btn-primary">buscar</button>
                         </div>
                         <button id="btn-close-search-form" type="button" class="btn btn-close "
@@ -147,13 +188,36 @@
         </div>
     </div>
 
+    <div class="container-fluid bg-white d-flex justify-content-center d-md-none">
+
+        <a href="https://www.cut.org.br/" target="_blank">
+            <img src="<?php bloginfo("template_url"); ?>/img/ic-cut.jpg" style="height: 40px;">
+        </a>
+
+        <a href="https://www.industriall-union.org/" target="_blank">
+            <img src="<?php bloginfo("template_url"); ?>/img/ic-industriall.jpg" style="height: 40px;">
+        </a>
+
+        <a href="#" target="_blank">
+            <img src="<?php bloginfo("template_url"); ?>/img/ic-sinap.jpg" style="height: 40px;">
+        </a>
+
+        <a href="https://www.facebook.com/Papeleiros/" target="_blank">
+            <img src="<?php bloginfo("template_url"); ?>/img/ic-federacao.jpg" style="height: 40px;">
+        </a>
+    </div>
+
 </header>
+
+
 
 <!-- <div id="fixed-header"></div> -->
 
 <script type="text/javascript">
     
-    const formSearch = document.getElementById('form-search');
+    const formSearch = document.getElementById('form-search'),
+          navbarPrincipal = document.getElementById('navbar-principal'),
+          topMenu = document.getElementById('top-menu');
 
     document.getElementById('ic-searc').addEventListener('click', function(e){
         formSearch.classList.toggle('d-none');
@@ -166,5 +230,21 @@
     document.getElementById('btn-close-search-form').addEventListener('click', function(e){
         formSearch.classList.toggle('d-none');
     })
+
+    document.addEventListener('scroll', function(event){
+        var scrooll = event.target.scrollingElement.scrollTop;
+        if(scrooll > 300){
+            // mostra o header
+            formSearch.classList.add("position-fixed", "w-100", "mt-5", "pt-4");
+            navbarPrincipal.classList.add("position-fixed", "w-100");
+            topMenu.classList.remove("d-md-block");
+        } else {
+            // esconde o header
+            formSearch.classList.remove("position-fixed", "w-100", "mt-5", "pt-4");
+            navbarPrincipal.classList.remove("position-fixed", "w-100");
+            topMenu.classList.add("d-md-block");
+        }
+    });
+
 
 </script>

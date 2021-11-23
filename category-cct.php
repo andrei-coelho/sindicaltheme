@@ -1,5 +1,7 @@
 <?php 
 
+$atualPage = "cct";
+
 get_header();
 
 $varsAPI = [

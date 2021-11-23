@@ -3,9 +3,10 @@
 ?>
 <div class="container" style="min-height: 500px;">
 
-    <div id="<?php echo "content-list-".$dynamicID; ?>" class="row my-2">
+    <div id="<?php echo "content-list-".$dynamicID; ?>" class="row py-2">
         <?php 
 
+        if(!isset($noShowHeader)) $noShowHeader = false;
         $firstList = true;
 
         while($query -> have_posts()):
@@ -13,17 +14,18 @@
             $query->the_post();
             $cats = get_the_category();
             $catI = count($cats)-1;
-            $categorySlug = $cats[$catI]->name;
+
+            $categorySlug = $cats[$catI]->slug;
 
             if(!isset($categoryParent)){
                 $categoryParent = $categorySlug;
             }
 
             if(!isset($niceNameCateg)){
-                $niceNameCateg = $cats[$catI]->category_nicename;
+                $niceNameCateg = $cats[$catI]->cat_name;
             }
 
-            if($firstList){
+            if($firstList && !$noShowHeader){
                 echo "<div class=\"col-12 py-4\"><h1>$niceNameCateg</h1></div>";
                 $firstList = false;
             }
@@ -36,11 +38,11 @@
     </div>
 
     <div class="row">
-        <div class="col-12">
-            <button id="btn-mais-<?php echo $dynamicID; ?>" class="btn btn-primary">
+        <div class="col-12 py-3">
+            <button id="btn-mais-<?php echo $dynamicID; ?>" class="btn btn-primary mx-auto" style="display:block;">
                 <?php echo "mais $niceNameCateg..."; ?>
             </button>
-            <button id="btn-spn-<?php echo $dynamicID; ?>" class="btn btn-primary" style="display:none;" type="button" disabled>
+            <button id="btn-spn-<?php echo $dynamicID; ?>" class="btn btn-primary mx-auto" style="display:none;" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 aguarde...
             </button>

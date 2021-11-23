@@ -1,5 +1,7 @@
 <?php 
     
+    $atualPage = "home";
+
     get_header();
 
     $campanha_salarial_status = false;
@@ -88,6 +90,6 @@
         </div>
     </div>
 
-<?php get_footer(); 
+<?php get_footer(); ?>
 
 

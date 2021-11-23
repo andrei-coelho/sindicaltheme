@@ -1,4 +1,4 @@
-<div class="container mt-2">
+<div class="container pt-2">
     <a href="<?php echo $capa['link']; ?>"><div class="capa-link row bg-white shadow">
         <div class="col-12 col-md-7 notice-style-capa" 
             style="background-image:url('<?php echo $capa['image']; ?>')">

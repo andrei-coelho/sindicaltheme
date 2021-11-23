@@ -13,6 +13,7 @@
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="mx-auto text-center">
+                            <!--
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                                     viewBox="0 0 30 30"
@@ -22,7 +23,7 @@
                                     </g>
                                 </svg>
                             </a>
-            
+                            -->
                             <a href="https://www.facebook.com/papeleirosmogi/" target="_blank">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                                     viewBox="0 0 30 30"
@@ -42,7 +43,7 @@
                                     </g>
                                 </svg>
                             </a>
-            
+                            <!--
                             <a href="#">
                                 <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="30px" height="30px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                                     viewBox="0 0 30 30"
@@ -52,6 +53,7 @@
                                     </g>
                                 </svg>
                             </a>
+                            -->
                         </div>
                     </div>
                 </div>
