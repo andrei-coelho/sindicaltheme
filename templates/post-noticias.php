@@ -19,13 +19,11 @@
             <hr>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4">
-                        <span>Por: <?php the_author(); ?></span>
-                    </div>
-                    <div class="col-4">
+                    
+                    <div class="col-12">
                         <span><?php the_time('d/m/Y'); ?></span>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-6"></div>
                 </div>
             </div>
             <hr>

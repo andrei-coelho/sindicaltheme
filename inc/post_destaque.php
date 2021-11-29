@@ -8,9 +8,7 @@
                 <div class="col-6">
                     <span class="p-1 bg-primary text-light"><?php echo $capa['categ']; ?></span>
                 </div>
-                <div class="col-6">
-                    <p class="text-muted fs-6 text-end"><?php echo $capa['data']; ?></p>
-                </div>
+                
             </div>
             <h1><?php echo $capa['title']; ?></h1>
             <h5 class="text-dark"><?php echo $capa['descr']; ?></h5>

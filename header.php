@@ -19,7 +19,7 @@
 <body class="bg-light">
  
 
-<header>
+<header style="position: fixed; width: 100%;">
 
     <nav id="top-menu" class="top-menu d-none d-md-block bg-white w-100">
 
@@ -36,9 +36,11 @@
                         <li class="nav-item">
                             <a class="nav-link <?php echo($atualPage == "diretoria" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>/diretoria/">Diretoria</a>
                         </li>
+                        <!--
                         <li class="nav-item">
                             <a class="nav-link <?php echo($atualPage == "contato" ? "text-primary" : "text-dark"); ?> sm" href="<?php echo site_url(); ?>/contato/">Contato</a>
                         </li>
+                        -->
                     </ul>
                 </div>
 
@@ -79,7 +81,8 @@
             </button>
             
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <img class="my-1 mx-3" src="<?php bloginfo('template_url'); ?>/img/logo.png" alt="logo">
+                <img id="logoTop" class="mx-3" src="<?php bloginfo('template_url'); ?>/img/logo_papeleiros_mogi_oficial.png" alt="logo">
+                <span class="d-none d-lg-inline">Sindicato dos Papeleiros de Mogi</span>
             </a>
             
             <button id="ic-searc-2" class="btn btn-clean d-lg-none">
@@ -94,7 +97,6 @@
                         <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>">Home</a>
                     </li>
                     
-
                     <li class="nav-item">
                         <a class="nav-link nav-link-light <?php echo($atualPage == "noticias" ? "active" : ""); ?>" href="<?php echo site_url(); ?>/noticias">Notícias</a>
                     </li>
@@ -117,19 +119,19 @@
                     </li>
                     -->
 
-                    <!--Serviços
+
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-link-light dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            serviços
+                            Serviços
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="<?php echo site_url(); ?>/lazer">Lazer</a></li>
+                            <li><a class="dropdown-item" href="<?php echo site_url(); ?>/juridico">Jurídico</a></li>
+                            <li><a class="dropdown-item" href="<?php echo site_url(); ?>/cipa">CIPA</a></li>
+                            <li><a class="dropdown-item" href="<?php echo site_url(); ?>/plr">PLR</a></li>
                         </ul>
                     </li>
-                    -->
+        
 
                     <li class="nav-item">
                         <a class="nav-link nav-link-light d-md-none" href="<?php echo site_url(); ?>/o-sindicato/">O Sindicato</a>
@@ -146,7 +148,7 @@
 
             </div>
 
-            <div class="second-part bg-secondary d-none d-lg-block px-3">
+            <div class="second-part d-none d-lg-block px-3">
                 
                 <div class="row">
                     <div class="col-12">
@@ -167,11 +169,11 @@
 
     </nav>
 
-    <div id="form-search" class="w-100 d-none">
+    <div id="form-search" class="w-100 d-block d-none" style="position: absolute;">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10 col-lg-8">
-                    <form class="m-0 p-0 mt-2 px-3 " method="get" action="<?php bloginfo('url') ?>">
+                    <form class="m-0 p-0 mt-2 px-3" method="get" action="<?php bloginfo('url') ?>">
                         
                         <div class="input-group shadow">
                             <input class="form-control" name="s" type="search" placeholder="Palavra-chave" aria-label="Search">
@@ -209,9 +211,7 @@
 
 </header>
 
-
-
-<!-- <div id="fixed-header"></div> -->
+<div id="fixed-header"></div>
 
 <script type="text/javascript">
     
@@ -233,14 +233,14 @@
 
     document.addEventListener('scroll', function(event){
         var scrooll = event.target.scrollingElement.scrollTop;
-        if(scrooll > 300){
+        if(scrooll > 200){
             // mostra o header
-            formSearch.classList.add("position-fixed", "w-100", "mt-5", "pt-4");
+            formSearch.classList.add("mt-5", "pt-4", "pt-lg-5");
             navbarPrincipal.classList.add("position-fixed", "w-100");
             topMenu.classList.remove("d-md-block");
         } else {
             // esconde o header
-            formSearch.classList.remove("position-fixed", "w-100", "mt-5", "pt-4");
+            formSearch.classList.remove("mt-5", "pt-4", "pt-lg-5");
             navbarPrincipal.classList.remove("position-fixed", "w-100");
             topMenu.classList.add("d-md-block");
         }

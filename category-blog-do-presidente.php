@@ -4,12 +4,21 @@ get_header();
 
 $varsAPI = [
     "category_name" => "blog-do-presidente",
-    "posts_per_page" => 1,
+    "posts_per_page" => 6,
     'order' => 'DESC'
 ];
 
-include "templates/header-blog.php";
+?> 
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8">
+            <?php include "templates/header-blog.php"; ?>
+        </div>
+    </div>
+</div>
+
+<?php 
 $template_item = '<div class="container">
     <div class="row">
         <div class="col-12 border-bottom py-2">

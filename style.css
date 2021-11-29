@@ -71,6 +71,10 @@ h1, h2, h3, .nav-link, .btn {
 
 @media (min-width: 0px) { 
 
+    #logoTop {
+        width: 60px;
+    }
+
     .separador {
         height: 180px;
     }
@@ -91,7 +95,7 @@ h1, h2, h3, .nav-link, .btn {
     }
 
     #fixed-header {
-        height: 90px;  
+        height: 100px;  
         width: 100%;
     }
 }
@@ -133,8 +137,12 @@ h1, h2, h3, .nav-link, .btn {
 
 @media (min-width: 768px) { 
     
+    #logoTop {
+        width: 80px;
+    }
+
     #fixed-header {
-        height: 130px;  
+        height: 140px;  
     } 
 
     .notice-style-simple {

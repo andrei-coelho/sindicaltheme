@@ -5,11 +5,11 @@
             <div class="container p-3">
                 <div class="row">
                     <div class="col-12 col-md-4">
-                        <img class="d-block mx-auto" src="<?php bloginfo('template_url') ?>/img/logo.png" alt="">
+                        <img style="width: 80px;" class="d-block mx-auto" src="<?php bloginfo('template_url') ?>/img/logo_papeleiros_mogi_oficial.png" alt="">
                     </div>
                     <div class="col-12 col-md-4">
                         <p class="text-white text-center">R. Francisco Franco, 375 - Centro<br>
-                        Mogi das Cruzes - SP, 08710-590</p>
+                        Mogi das Cruzes - SP, 08710-590 <br> (11) 4795-9630</p>
                     </div>
                     <div class="col-12 col-md-4">
                         <div class="mx-auto text-center">

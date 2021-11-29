@@ -6,7 +6,7 @@ get_header();
 
 $varsAPI = [
     "category_name" => "eventos",
-    "posts_per_page" => 1,
+    "posts_per_page" => 6,
     'order' => 'DESC'
 ];
 
